@@ -23,9 +23,11 @@
 $$\frac{-ħ^2} {2m}\frac{d^2 \psi}{dx^2}+V(x)\psi  = E\psi $$
 
 二维薛定态谔方程：
+
 $$\frac{-ħ^2} {2m}(\frac{\partial^2 \psi}{\partial y^2}+\frac{\partial^2 \psi}{\partial x^2})+V(x,y)\psi  = E\psi $$
 
 三维薛定态谔方程：
+
 $$\frac{-ħ^2} {2m}(\frac{\partial^2 \psi}{\partial x^2}+\frac{\partial^2 \psi}{\partial y^2}+\frac{\partial^2 \psi}{\partial z^2})+V(x,y,z)\psi  = E\psi $$
 
 ### 第一步 去量纲
@@ -41,29 +43,37 @@ $$-\frac{1} {2}(\frac{\partial^2 \psi}{\partial X^2}+\frac{\partial^2 \psi}{\par
 
 ### 第二步 微分方程转差分方程
 原理：
+
 $$\frac{d^2 f}{dx^2}_{x=j\Delta x}  = \frac{f_{j+1}+2f_{j}+f_{j-1}}{\Delta x^2}$$
 $$\lim_{\Delta x \to 0}$$
 
 一维:
+
 $$-\frac{\psi_{i+1}+2\psi_{i}+\psi_{i-1}}{2\Delta X^2}+mL^2V_i\psi_i= mL^2E\psi_i $$
 
 二维： 
+
 $$-\frac 1 2(\frac{\psi_{j(i+1)}+2\psi_{ji}+\psi_{j(i-1)}}{\Delta X^2}+\frac{\psi_{(j+1)i}+2\psi_{ji}+\psi_{(j-1)i}}{\Delta Y^2})+mL^2V_{ji}\psi_{ji}= mL^2E\psi_{ji} $$
 
-三维： 
+三维：
+
 $$-\frac 1 2(\frac{\psi_{kj(i+1)}+2\psi_{kji}+\psi_{kj(i-1)}}{\Delta X^2}+\frac{\psi_{k(j+1)i}+2\psi_{kji}+\psi_{k(j-1)i}}{\Delta Y^2}+\frac{\psi_{(k+1)ji}+2\psi_{kji}+\psi_{(k-1)ji}}{\Delta Z^2})+mL^2V_{kji}\psi_{kji}= mL^2E\psi_{kji} $$
 
 #### 进一步转化
 一维: 
+
  $$-\frac{\psi_{i+1}}{2\Delta X^2}+({\frac 1 {\Delta X^2}+ mL^2V_{i}})\psi_{i}+\frac{\psi_{i-1}}{-2\Delta X^2}= mL^2E\psi_{i} $$  
  二维：
+ 
 $$\frac{\psi_{j(i+1)}}{-2\Delta X^2}+\frac{\psi_{(j+1)i}}{-2\Delta Y^2}+({\frac 1 {\Delta X^2}+ \frac 1 {\Delta Y^2}+mL^2V_{ji}})\psi_{ji}+\frac{\psi_{j(i-1)}}{-2\Delta X^2}+\frac{\psi_{(j-1)i}}{-2\Delta Y^2}= mL^2E\psi_{ji} $$  
-三维： 
+三维：
+
  $$\frac{\psi_{kj(i+1)}}{-2\Delta X^2}+\frac{\psi_{k(j+1)i}}{-2\Delta Y^2}+\frac{\psi_{(k+1)ji}}{-2\Delta Z^2}+({\frac 1 {\Delta X^2}+ \frac 1 {\Delta Y^2}+\frac 1 {\Delta Z^2}+mL^2V_{kji}})\psi_{kji}+\frac{\psi_{kj(i-1)}}{-2\Delta X^2}+\frac{\psi_{k(j-1)i}}{-2\Delta Y^2}+\frac{\psi_{(k-1)ji}}{-2\Delta Z^2}= mL^2E\psi_{kji} $$  
 
  ### 第三步 差分方程矩阵表示
 
  一维:
+ 
 $$ \begin{bmatrix}-\frac{1}{2\Delta X^2} & {\frac 1 {\Delta X^2}+ mL^2V_{i}} &  \frac{1}{-2\Delta X^2} \\  \end{bmatrix}\begin{bmatrix} \psi_{i-1} \\ \psi_i \\  \psi_{i+1} \end{bmatrix}= mL^2 E  \psi_i $$
 
 二维:
@@ -71,6 +81,7 @@ $$ \begin{bmatrix}-\frac{1}{2\Delta X^2} & {\frac 1 {\Delta X^2}+ mL^2V_{i}} &  
 $$ \begin{bmatrix}\frac{1}{-2\Delta X^2} & \frac{1}{-2\Delta Y^2} &{\frac 1 {\Delta X^2}+\frac 1 {\Delta Y^2}+ mL^2V_{i}} &  \frac{1}{-2\Delta X^2} &  \frac{1}{-2\Delta Y^2}\\  \end{bmatrix}\begin{bmatrix} \psi_{j(i+1)} \\ \psi_{(j+1)i} \\  \psi_{ji} \\\psi_{j(i-1)}\\\psi_{(j-1)i}\end{bmatrix}= mL^2 E \psi_{ji} $$
 
 三维:
+
 $$ \begin{bmatrix}\frac{1}{-2\Delta X^2} & \frac{1}{-2\Delta Y^2} &\frac{1}{-2\Delta Z^2} &{\frac 1 {\Delta X^2}+ \frac 1 {\Delta Y^2}+\frac 1 {\Delta Z^2}+mL^2V_{i}} &  \frac{1}{-2\Delta X^2} &  \frac{1}{-2\Delta Y^2} &  \frac{1}{-2\Delta Z^2}\\  \end{bmatrix}\begin{bmatrix} \psi_{kj(i+1)} \\ \psi_{k(j+1)i} \\ \psi_{(k+1)ji} \\  \psi_{kji} \\\psi_{kj(i-1)}\\\psi_{k(j-1)i}\\\psi_{(k-1)ji}\end{bmatrix}= mL^2 E   \psi_{kji}$$
 
 
