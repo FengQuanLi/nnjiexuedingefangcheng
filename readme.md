@@ -90,7 +90,7 @@ $$ \begin{bmatrix}\frac{1}{-2\Delta X^2} & \frac{1}{-2\Delta Y^2} &\frac{1}{-2\D
 基本思路是把$\psi$ 和E作为神经网络的参数。
 
 但是在实现方式上，这里不再构建本征方程。
-而直接用pytorch里面的embedding方从作为$\psi$ 的参数里引索对应的$\psi$。
+而直接用pytorch里面的embedding方法从作为$\psi$ 的参数里引索对应的$\psi$。
 
 具体实现参看上传的代码
 
