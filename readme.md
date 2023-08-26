@@ -100,6 +100,10 @@ $$ \begin{bmatrix}\frac{1}{-2\Delta X^2} & \frac{1}{-2\Delta Y^2} &\frac{1}{-2\D
 
 [神经网络求解薛定谔方程_三维](神经网络求解薛定谔方程_三维.ipynb)
 
+[神经网络求解薛定谔方程_二维（氢原子）](Schrödinger_hydrogen_2D_c.ipynb)
+
+[神经网络求解薛定谔方程_三维（氢原子）](Schrödinger_hydrogen_3D.ipynb)
+[求解本征方程_二维（氢原子）](lobpcg2d.ipynb)
 
 ## 参考资料
 [lukepolson_A](https://github.com/lukepolson/youtube_channel/blob/main/Python%20Metaphysics%20Series/vid3.ipynb)
