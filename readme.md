@@ -49,15 +49,15 @@ $$\lim_{\Delta x \to 0}$$
 
 一维:
 
-$$-\frac{\psi_{i+1}+2\psi_{i}+\psi_{i-1}}{2\Delta X^2}+mL^2V_i\psi_i= mL^2E\psi_i $$
+$$-\frac{\psi_{i+1}-2\psi_{i}+\psi_{i-1}}{2\Delta X^2}+mL^2V_i\psi_i= mL^2E\psi_i $$
 
 二维： 
 
-$$-\frac 1 2(\frac{\psi_{j(i+1)}+2\psi_{ji}+\psi_{j(i-1)}}{\Delta X^2}+\frac{\psi_{(j+1)i}+2\psi_{ji}+\psi_{(j-1)i}}{\Delta Y^2})+mL^2V_{ji}\psi_{ji}= mL^2E\psi_{ji} $$
+$$-\frac 1 2(\frac{\psi_{j(i+1)}-2\psi_{ji}+\psi_{j(i-1)}}{\Delta X^2}+\frac{\psi_{(j+1)i}-2\psi_{ji}+\psi_{(j-1)i}}{\Delta Y^2})+mL^2V_{ji}\psi_{ji}= mL^2E\psi_{ji} $$
 
 三维：
 
-$$-\frac 1 2(\frac{\psi_{kj(i+1)}+2\psi_{kji}+\psi_{kj(i-1)}}{\Delta X^2}+\frac{\psi_{k(j+1)i}+2\psi_{kji}+\psi_{k(j-1)i}}{\Delta Y^2}+\frac{\psi_{(k+1)ji}+2\psi_{kji}+\psi_{(k-1)ji}}{\Delta Z^2})+mL^2V_{kji}\psi_{kji}= mL^2E\psi_{kji} $$
+$$-\frac 1 2(\frac{\psi_{kj(i+1)}-2\psi_{kji}+\psi_{kj(i-1)}}{\Delta X^2}+\frac{\psi_{k(j+1)i}-2\psi_{kji}+\psi_{k(j-1)i}}{\Delta Y^2}+\frac{\psi_{(k+1)ji}-2\psi_{kji}+\psi_{(k-1)ji}}{\Delta Z^2})+mL^2V_{kji}\psi_{kji}= mL^2E\psi_{kji} $$
 
 #### 进一步转化
 一维: 
